@@ -1,0 +1,660 @@
+@font-face {
+    font-family: "Gantari";
+    src: url("../../font/Gantari-Regular.ttf");
+}
+*,*::after,*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gantari";
+    -webkit-font-smoothing: antialiased;
+}
+body {
+    background: #141414;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    scrollbar-width: 0;
+    scroll-behavior: smooth;
+}
+
+.hero-section {
+    color: #ffffff;
+    
+    .hero-bg {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        background-image: url("../../img/hero.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .info-container {
+        height: 100vh;
+        background: linear-gradient(90deg, rgba(20, 20, 20, 1) 0%, rgba(43, 42, 42, .9) 37%, rgba(125, 125, 125, 0.33027815618434875) 73%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 4rem;
+
+        .logo-container {
+            width: fit-content;
+            height: fit-content;
+            max-width: 40%;
+            max-height: 30%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    
+        .details-container {
+            margin-top: 2rem;
+            .details {
+                display: flex;
+                align-items: center;
+                color: #aaaaaa;
+                margin-top: 1rem;
+                font-size: .9rem;
+                .release-date {
+                    margin-right: 1rem;
+                    padding-right: 1rem;
+                    border-right: 1px solid;
+                }   
+            
+                .movie-ratings {
+                    span {
+                        user-select: none;
+                        border: 1px solid;
+                    }
+                }
+                .movie-genre {
+                    padding-right: 1rem;
+                    border-right: 1px solid;
+                    margin: 0 1rem;
+                }
+            }
+            
+            .synopsis {
+                width: 35%;
+                margin-top: 1.5rem;
+            }
+            
+            .movie-talent {
+                margin-top: 1.5rem;
+                width: 40%;
+                ul {
+                    li {
+                        list-style: none;
+                        span {
+                            color: #aaaaaa;
+                            margin-right: .4rem;
+                        }
+                    }
+                }
+            }
+        }
+        .watch-on-netflix {
+            margin-top: 2rem;
+            a {
+                padding: .5rem .7rem;
+                color: #ffffff;
+                background: #E50914;
+                text-decoration: none;
+                transition: 250ms;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+.section-header {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    
+    h3 {
+        border-right: 1px solid;
+        padding-right: 1rem;
+        margin-right: 1rem;
+    }
+
+    span {
+        color: #aaaaaa;
+    }
+}
+
+.season-episode-container {
+    margin-top: 1rem;
+    padding: 2rem 4rem;
+    color: #ffffff;
+
+    .section-header {
+        justify-content: space-between;
+        .unnamed-div {
+            display: flex;
+        }
+
+        .layout-selector {
+            display: flex;
+            align-items: center;
+
+            .grid-1 {
+                margin-right: .6rem;
+            }
+
+            svg {
+                fill: #ffffff;
+                transition: all 250ms;
+            }
+
+            .icon {
+                &.active {
+                    svg {
+                        fill: #E50914;
+                    }
+                }
+                &:hover {
+                    svg {
+                        fill: #E50914;
+                    }
+                }
+            }
+
+        }
+    }
+    
+    .season-selector {
+        margin-top: 1rem;
+
+        select {
+            width: 40%;
+            height: 40px;
+            background: none;
+            color: #ffffff;
+            outline: none;
+            border: none;
+            font-size: 1.1rem;
+
+            option {
+                color: #ffffff;
+                background: #141414;
+            }
+        }
+    }
+
+    .episode-list-container {
+        margin-top: 1rem;
+
+        .season {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+            .season-synopsis {
+                width: 40%;
+                margin-top: .5rem;
+                color: #aaaaaa;
+            }
+        }
+
+        .season-episode-list-container {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            max-width: 100%;
+            transition: all 250ms;
+            
+            &.view-default {
+                grid-template-columns: repeat(3, 1fr);
+
+                .episode {
+                    .episode-metadata {
+                        .number {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            &.view-small {
+                grid-template-columns: repeat(5, 1fr);
+
+                .episode {
+                    .episode-synopsis {
+                        opacity: 0;
+                        height: 0;
+                    }
+                    .episode-metadata {
+                        .episode-title {
+                            display: none;
+                        }
+                        .runtime {
+                            position: absolute;
+                            bottom: 15%;
+                            right: 3%;
+                            background: #0808086d;
+                            padding: .2rem .5rem;
+                            border-radius: 50px;
+                            font-size: .8rem;
+                            font-weight: bold;
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+            
+            .episode {
+                transition: all 250ms;
+                position: relative;
+                .episode-thumbnail {
+                    overflow: hidden;
+                    object-fit: cover;
+                    
+                    img {
+                        border-radius: 5px;
+                        max-width: 100%;
+                    }
+                }
+
+                &:hover {
+                    .number {
+                        color: #E50914;
+                    }
+                }
+    
+                .episode-metadata {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    
+                    .episode-title {
+                        max-width: 60%;
+                    }
+                    
+                    .runtime {
+                        font-size: .9rem;
+                        color: #aaaaaa;
+                    }
+                    
+                    .number {
+                        position: absolute;
+                        bottom: 15%;
+                        left: 3%;
+                        font-weight: bold;
+                        user-select: none;
+                        transition: all 250ms;
+                        padding: .2rem .5rem;
+                        border-radius: 5px;
+                        background: #0808086d;
+                    }
+                }
+    
+                .episode-synopsis {
+                    margin-top: .7rem;
+                    font-size: .8rem;
+                    color: #aaaaaa;
+                }
+            }
+        }
+    }
+
+}
+
+.season-original-soundtrack-container {
+    margin-top: 1rem;
+    padding: 0 4rem;
+
+    .ost-metadata {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: .8rem;
+
+        .item {
+            color: #aaaaaa;
+            span {
+                color: #ffffff;
+            }
+        }
+    }
+
+    .original-soundtrack-list {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        margin-top: 1.5rem;
+        gap: 1.5rem;
+
+        .ost-item {
+            .ost-thumb {
+                overflow: hidden;
+                object-fit: cover;
+                
+                img {
+                    border-radius: 5px;
+                    max-width: 100%;
+                }
+            }
+            .ost-title {
+                color: #ffffff;
+                margin-top: .5rem;
+            }
+            .ost-artist {
+                color: #aaaaaa;
+                font-size: .9rem;
+            }
+        }
+    }
+}
+
+.more-details-container {
+    margin-top: 1rem;
+    padding: 2rem 4rem;
+    color: #ffffff;
+
+    .more-details-label {
+        color: #aaaaaa;
+    }
+
+    .details-section {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        margin-top: 1.5rem;
+
+        .details-cell {
+            .cell-label {
+                margin-bottom: .5rem;
+                color: #aaaaaa;
+            }
+
+            .cell-items {
+
+                .ratings {
+                    border: 1px solid;
+                    user-select: none;
+                    font-size: .9rem;
+                    padding: .1rem;
+                }
+            }
+        }
+
+    }
+    .cast-details-container {
+        margin-top: 1rem;
+        
+        .cast-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: .6rem;
+        }
+    }
+}
+
+.section-hook {
+    padding: 2rem 4rem;
+    color: #aaaaaa;
+    text-align: center;
+    font-size: .9rem;
+
+    .hook-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            max-width: 500px;
+        }
+    }
+
+    .hook-hr {
+        width: 100%;
+        height: 1px;
+        background: #aaaaaa;
+        &:nth-child(1) { margin-bottom: 1rem; }
+        &:nth-child(3) { margin-top: 1rem; }
+    }
+}
+
+
+// responsive design
+
+// 4k monitor version
+@media screen and (min-width: 2560px) {
+    .hero-section {
+        .info-container {
+            padding: 0 15rem;
+        }
+    }
+    .season-episode-container {
+        padding: 2rem 15rem;
+        .season {
+            .season-episode-list-container {
+                &.view-small {
+                    grid-template-columns: repeat(6, 1fr);
+                }
+                &.view-default {
+                    grid-template-columns: repeat(5, 1fr);
+                }
+            }
+        }
+    }
+    .more-details-container {
+        padding: 2rem 15rem;
+        .details-section,
+        .cast-details-container .cast-list {
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
+}
+
+// tablet version
+@media screen and (max-width: 900px) {
+    body {
+        background: #080808;
+    }
+    .hero-section {
+
+        .info-container {
+            padding: 0 2rem;
+            background: linear-gradient(90deg, rgba(16, 16, 16, 1) 0%, rgba(125, 125, 125, 0.5) 73%);
+            .logo-container {
+                width: fit-content;
+                height: fit-content;
+                max-height: 20%;
+                max-width: 90%;
+            }
+        }
+
+    }
+    .season-episode-container {
+        .section-header {
+            .layout-selector {
+                display: none;
+            }
+        }
+        .season {
+            .season-episode-list-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+    .more-details-container {
+        .details-section,
+        .cast-details-container .cast-list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .hero-section {
+
+        .info-container {
+            .hero-bg {
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .logo-container {
+                width: fit-content;
+                height: fit-content;
+            }
+        }
+
+    }
+}
+
+// mobile version
+@media screen and (max-width: 600px) {
+    body {
+        background: #080808;
+    }
+    .hero-section {
+        .hero-bg {
+            position: unset;
+            height: 30vh;
+            background-image: url("../../img/hero-mobile.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .info-container {
+            padding: 0 1rem;
+            background: none;
+            .logo-container {
+                width: fit-content;
+                height: fit-content;
+                max-width: max-content;
+                max-height: max-content;
+            }
+
+            .details-container {
+                .details {
+                    font-size: .85rem;
+                    .release-date, .movie-genre {
+                        padding-right: .5rem;
+                        margin-right: .5rem;
+                    }
+                }
+
+                .synopsis {
+                    width: 100%;
+                    font-size: .9rem;
+                }
+
+                .movie-talent {
+                    width: 100%;
+                    font-size: .9rem;
+                }
+
+                .watch-on-netflix {
+                    margin-top: 1rem;
+                    a {
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+
+    }
+    .season-episode-container, .more-details-container {
+        margin-top: -2rem;
+        padding: 0 1rem;
+        font-size: .9rem;
+        
+        .section-header {
+            
+            .layout-selector {
+                display: none;
+            }
+        }
+        .season-selector {
+            select {
+                width: 100%;
+            }
+        }
+
+        .episode-list-container {
+            .season {
+                .season-synopsis {
+                    width: 100%;
+                    font-size: .9rem;
+                }
+                .season-episode-list-container {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+    
+                .season-episode-list-container {
+                    .season-selector {
+                        select {
+                            width: 100%;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .season-original-soundtrack-container {
+        padding: 0 1rem;
+
+        .ost-metadata {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            width: 100%;
+            font-size: .9rem;
+        }
+
+        .original-soundtrack-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    .more-details-container {
+        margin-top: 2rem;
+        .details-section {
+            gap: .5rem;
+            margin-top: .7rem;
+        }
+        .details-section,
+        .cast-details-container .cast-list {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    .section-hook {
+        padding: 1rem;
+        .hook-text {
+            p {
+                font-size: .8rem;
+                max-width: unset;
+            }
+        }
+    }
+
+    .section-header {
+        h3 {
+            border-right: none;
+        }
+        span {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .hero-section {
+        .info-container {
+            .details-container {
+                margin-top: 1rem;
+            }
+        }
+    }
+}

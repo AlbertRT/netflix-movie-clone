@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Playlist</title>
+    <link rel="stylesheet" href="css/css.min/style.min.css">
+</head>
+
+<body>
+    <div class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="info-container">
+            <div class="logo-container">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="details-container">
+                <div class="title">
+                    <h2>Hospital Playlist</h2>
+                </div>
+                <div class="details">
+                    <div class="release-date"><span>2020</span></div>
+                    <div class="movie-ratings"><span>16+</span></div>
+                    <div class="movie-genre"><span>TV Comedies</span></div>
+                    <div class="runtime"><span>2 Season</span></div>
+                </div>
+                <div class="synopsis">
+                    <p>Every day is extraordinary for five doctors and their patients inside a hospital, where birth,
+                        death and everything in between coexist.</p>
+                </div>
+                <div class="movie-talent">
+                    <ul>
+                        <li><span class="staring">Straing: </span>Cho Jung-seok, Yoo Yeon-seok, Jung Kyung-ho</li>
+                        <li><span class="creator">Creators:</span>Shin Won-ho, Lee Woo-jung</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="watch-on-netflix"><a href="https://www.netflix.com/id-en/title/81239224">Watch on Netflix</a>
+            </div>
+        </div>
+    </div>
+    <div class="season-episode-container">
+        <div class="section-header">
+            <div class="unnamed-div">
+                <h3>Episodes</h3> <span>Hospital Playlist</span>
+            </div>
+            <div class="layout-selector">
+                <div class="grid-1 icon active">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20px">
+                        <path d="M10,2H3C2.4,2,2,2.4,2,3v7c0,0.6,0.4,1,1,1h7c0.6,0,1-0.4,1-1V3C11,2.4,10.6,2,10,2z M10,13H3c-0.6,0-1,0.4-1,1v7
+    c0,0.6,0.4,1,1,1h7c0.6,0,1-0.4,1-1v-7C11,13.4,10.6,13,10,13z M21,2h-7c-0.6,0-1,0.4-1,1v7c0,0.6,0.4,1,1,1h7c0.6,0,1-0.4,1-1V3
+    C22,2.4,21.6,2,21,2z M21,13h-7c-0.6,0-1,0.4-1,1v7c0,0.6,0.4,1,1,1h7c0.6,0,1-0.4,1-1v-7C22,13.4,21.6,13,21,13z" />
+                    </svg>
+                </div>
+                <div class="grid-2 icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px">
+                        <path
+                            d="M4 5C4 4.44772 4.44772 4 5 4H7C7.55228 4 8 4.44772 8 5V7C8 7.55228 7.55228 8 7 8H5C4.44772 8 4 7.55228 4 7V5zM10 5C10 4.44772 10.4477 4 11 4H13C13.5523 4 14 4.44772 14 5V7C14 7.55228 13.5523 8 13 8H11C10.4477 8 10 7.55228 10 7V5zM17 4C16.4477 4 16 4.44772 16 5V7C16 7.55228 16.4477 8 17 8H19C19.5523 8 20 7.55228 20 7V5C20 4.44772 19.5523 4 19 4H17zM4 11C4 10.4477 4.44772 10 5 10H7C7.55228 10 8 10.4477 8 11V13C8 13.5523 7.55228 14 7 14H5C4.44772 14 4 13.5523 4 13V11zM11 10C10.4477 10 10 10.4477 10 11V13C10 13.5523 10.4477 14 11 14H13C13.5523 14 14 13.5523 14 13V11C14 10.4477 13.5523 10 13 10H11zM16 11C16 10.4477 16.4477 10 17 10H19C19.5523 10 20 10.4477 20 11V13C20 13.5523 19.5523 14 19 14H17C16.4477 14 16 13.5523 16 13V11zM5 16C4.44772 16 4 16.4477 4 17V19C4 19.5523 4.44772 20 5 20H7C7.55228 20 8 19.5523 8 19V17C8 16.4477 7.55228 16 7 16H5zM10 17C10 16.4477 10.4477 16 11 16H13C13.5523 16 14 16.4477 14 17V19C14 19.5523 13.5523 20 13 20H11C10.4477 20 10 19.5523 10 19V17zM17 16C16.4477 16 16 16.4477 16 17V19C16 19.5523 16.4477 20 17 20H19C19.5523 20 20 19.5523 20 19V17C20 16.4477 19.5523 16 19 16H17z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="season-selector">
+            <label for="unnamed-select"></label>
+            <div class="select">
+                <select id="unnamed-select" class="season-selection">
+                    <option value="0" data-seasons="#season-1">Season 1</option>
+                    <option value="1" data-seasons="#season-2">Season 2</option>
+                </select>
+            </div>
+        </div>
+        <div class="episode-list-container">
+            <div class="season active" id="season-1" data-season>
+                <div class="season-metadata">
+                    <div class="season-release-year"><span>Release Year: 2020</span></div>
+                    <div class="season-synopsis">
+                        <p>Every day is extraordinary for five doctors and their patients inside a hospital, where
+                            birth,
+                            death and everything in between coexist.</p>
+                    </div>
+                </div>
+                <div class="season-episode-list-container view-default">
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-1/eps-1.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">1. Episode 1</h4>
+                            <span class="runtime">83m</span>
+                            <div class="number">1</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>Five friends whose friendship goes back to their days in med school are brought back
+                                together
+                                when a phone call interrupts each of their busy lives.</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-1/eps-2.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">2. Episode 2</h4>
+                            <span class="runtime">83m</span>
+                            <div class="number">2</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>For the first time in 20 years, everyone's finally working under the same roof. A patient
+                                with a familiar name finds Chae Song-hwa.</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-1/eps-3.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">3. Episode 3</h4>
+                            <span class="runtime">89m</span>
+                            <div class="number">3</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>The hospital's med students are inspired by the doctors, who each look after their
+                                patients
+                                in their own ways. Lee Ik-jun gets a welcome visitor.</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-1/eps-4.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">4. Episode 4</h4>
+                            <span class="runtime">80m</span>
+                            <div class="number">4</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>Yang Seok-hyeong's aloofness frustrates someone on his team. Jang Yun-bok and Jang
+                                Hong-do
+                                witness a surprising side of Song-hwa outside the hospital.</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-1/eps-5.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">5. Episode 5</h4>
+                            <span class="runtime">74m</span>
+                            <div class="number">5</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>Jang Gyeo-ul can't get one kind word out of Ahn Jeong-won, who seems especially cold to
+                                her.
+                                A difficult professor joins the cardiothoracic department.</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-1/eps-6.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">6. Episode 6</h4>
+                            <span class="runtime">83m</span>
+                            <div class="number">6</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>Kim Jun-wan waits for a response from Lee Ik-sun, who says she needs some time. Jeong-won
+                                breaks painful news to the family of his longtime patient.</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-1/eps-7.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">7. Episode 7</h4>
+                            <span class="runtime">85m</span>
+                            <div class="number">7</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>An unforeseen problem just before a surgery forces Jeong-won to make a tough decision.
+                                Meanwhile, Jun-wan is put on edge in the operating room.</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-1/eps-8.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">8. Episode 8</h4>
+                            <span class="runtime">89m</span>
+                            <div class="number">8</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>Distracted by a problem in his personal life, Do Jae-hak struggles to get through the
+                                day.
+                                Meanwhile, Chu Min-ha finds herself drowning in work.</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-1/eps-9.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">9. Episode 9</h4>
+                            <span class="runtime">77m</span>
+                            <div class="number">9</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>An urgent call sends Song-hwa rushing to the hospital to tend to a young patient. Ik-jun
+                                receives a plea from a desperate father.</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-1/eps-10.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">10. Episode 10</h4>
+                            <span class="runtime">92m</span>
+                            <div class="number">10</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>Put in a stressful situation, Jae-hak looks to Jun-wan for advice on the right thing to
+                                do.
+                                Ik-jun accidentally uncovers an extraordinary secret.</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-1/eps-11.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">11. Episode 11</h4>
+                            <span class="runtime">88m</span>
+                            <div class="number">11</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>Ik-jun handles a sensitive request from the troubled wife of a patient. A sudden piece of
+                                news threatens Seok-hyeong's peace.</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-1/eps-12.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">12. Episode 12</h4>
+                            <span class="runtime">114m</span>
+                            <div class="number">12</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>As doctors and as humans, the five friends each face a maze of life's questions and
+                                decisions
+                                as they figure out their next steps.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="season" id="season-2" data-season>
+                <div class="season-metadata">
+                    <div class="season-release-year"><span>Release Year: 2021</span></div>
+                    <div class="season-synopsis">
+                        <p>Inside the hospital, where every patient and every story matters, the five friends confront
+                            the ups and downs of life as doctors — and as human beings.</p>
+                    </div>
+                </div>
+                <div class="season-episode-list-container view-default">
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-2/eps-1.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">1. Episode 1</h4>
+                            <span class="runtime">96m</span>
+                            <div class="number">1</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>As life at the hospital goes on, the five friends' growing pains continue. Gyeo-ul is
+                                disquieted by frequent visits from a patient's mother.</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-2/eps-2.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">2. Episode 2</h4>
+                            <span class="runtime">79m</span>
+                            <div class="number">2</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>Traveling to and from Seoul, Song-hwa takes on a VIP client in need of surgery. A woman
+                                with pregnancy complications fights to keep her baby alive.</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-2/eps-3.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">3. Episode 3</h4>
+                            <span class="runtime">97m</span>
+                            <div class="number">3</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>An urgent case involving a liver transplant between a father and son is brought to
+                                Ik-jun's attention. Jun-wan has big news for one of his patients.</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-2/eps-4.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">4. Episode 4</h4>
+                            <div class="number">4</div>
+                            <span class="runtime">95m</span>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>Worries about Ik-sun plague Jun-wan's ever-busy days. While watching over a patient
+                                post-surgery, Heo Seon-bin experiences a critical lesson.</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-2/eps-5.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">5. Episode 5</h4>
+                            <span class="runtime">98m</span>
+                            <div class="number">5</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>Gyeo-ul receives a disturbing noise complaint about one of Ik-jun's patients.
+                                Seok-hyeong opens up to Song-hwa, who gives him a piece of advice.</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-2/eps-6.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">6. Episode 6</h4>
+                            <span class="runtime">84m</span>
+                            <div class="number">6</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>From student to intern for Yun-bok and Hong-do, and resident to fellow for Gyeo-ul, every
+                                step forward comes with plenty of hiccups — and new learnings.</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-2/eps-7.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">7. Episode 7</h4>
+                            <span class="runtime">88m</span>
+                            <div class="number">7</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>Ik-jun’s team deals with a patient’s anxious brother — and his overbearing attitude. Chu
+                                Min-ha leaves a bad impression on a visitor in the cafeteria.</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-2/eps-8.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">8. Episode 8</h4>
+                            <span class="runtime">112m</span>
+                            <div class="number">8</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>Jeong Rosa fears the worst when her memory continues to decline. Song-hwa grapples with
+                                the unforeseen diagnosis of a loved one.</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-2/eps-9.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">9. Episode 9</h4>
+                            <span class="runtime">105m</span>
+                            <div class="number">9</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>A hospital ping pong tournament brings out each department's competitive streak. Ik-sun
+                                and Jun-wan make plans to meet for a proper chat.</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-2/eps-10.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">10. Episode 10</h4>
+                            <span class="runtime">112m</span>
+                            <div class="number">10</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>The five friends leave for vacation together, but not all of them make it to the
+                                destination. Jae-hak and his wife navigate one surprise after another</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-2/eps-11.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">11. Episode 11</h4>
+                            <span class="runtime">114m</span>
+                            <div class="number">11</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>One of the hospital's doctors is rushed into the emergency room. A patient with an
+                                unanticipated condition poses a challenge for Song-hwa and her team.</p>
+                        </div>
+                    </div>
+                    <div class="episode">
+                        <div class="episode-thumbnail"><img src="img/season-2/eps-12.jpg" alt=""></div>
+                        <div class="episode-metadata">
+                            <h4 class="episode-title">12. Episode 12</h4>
+                            <span class="runtime">122m</span>
+                            <div class="number">12</div>
+                        </div>
+                        <div class="episode-synopsis">
+                            <p>A series of tough choices and sudden crises keeps life at the hospital as busy as ever.
+                                Through it all, the five friends continue to follow their hearts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="more-details-container">
+        <div class="section-header">
+            <h3>More Details</h3> <span>Hospital Playlist</span>
+        </div>
+        <div class="details-section">
+            <div class="details-cell">
+                <div class="cell-label"><span>Watch Offline</span></div>
+                <div class="cell-item"><span>Available to download</span></div>
+            </div>
+            <div class="details-cell">
+                <div class="cell-label"><span>Genres</span></div>
+                <div class="cell-items"><span>Korean, Medical TV Shows, TV Dramas, TV Comedies</span></div>
+            </div>
+            <div class="details-cell">
+                <div class="cell-label"><span>This show is...</span></div>
+                <div class="cell-items"><span>Heartfelt</span></div>
+            </div>
+            <div class="details-cell">
+                <div class="cell-label"><span>Ratings</span></div>
+                <div class="cell-items"><span class="ratings">16+</span></div>
+            </div>
+        </div>
+        <div class="cast-details-container">
+            <div class="more-details-label"><span>Cast</span></div>
+            <div class="cast-list">
+                <p class="cast-item">Cho Jung-seok</p>
+                <p class="cast-item">Kim Dae-Myeung</p>
+                <p class="cast-item">Kim Gap-soo</p>
+                <p class="cast-item">Yoo Yeon-seok</p>
+                <p class="cast-item">Jeon Mi-do</p>
+                <p class="cast-item">Jung Moon-sung</p>
+                <p class="cast-item">Jung Kyung-ho</p>
+                <p class="cast-item">Kim Hae-sook</p>
+            </div>
+        </div>
+    </div>
+    <div class="section-hook">
+        <div class="hook-hr"></div>
+        <div class="hook-text">
+            <p>A heartfelt drama from "Reply" series creators Lee Woo-jung and Shin Won-ho ("Prison Playbook").</p>
+        </div>
+        <div class="hook-hr"></div>
+    </div>
+
+    <script src="app.js" defer></script>
+</body>
+
+</html>
